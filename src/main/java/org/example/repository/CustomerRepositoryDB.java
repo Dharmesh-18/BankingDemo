@@ -6,7 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerRepositoryDB {
+public class CustomerRepositoryDB implements CustomerRepository{
 
     public List<Customer> findAll(){
 

@@ -1,6 +1,7 @@
 package org.example.service;
 
 import org.example.model.Customer;
+import org.example.repository.CustomerRepository;
 import org.example.repository.CustomerRepositoryDB;
 
 import java.util.List;
@@ -8,7 +9,12 @@ import java.util.stream.Collectors;
 
 public class DefaultCustomerService {
 
-    private CustomerRepositoryDB repository = new CustomerRepositoryDB();
+    private CustomerRepository repository ;
+
+    public DefaultCustomerService(CustomerRepository repository) {
+        this.repository = repository;
+
+    }
 
     public List<Customer> getAllCustomers() {
         return repository.findAll();
