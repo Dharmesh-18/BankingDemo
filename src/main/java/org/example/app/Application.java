@@ -18,6 +18,11 @@ public class Application {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         CustomerService service = context.getBean("customerService", CustomerService.class);
+        CustomerService service1 = context.getBean("customerService", CustomerService.class);
+        CustomerService service2 = context.getBean("customerService", CustomerService.class);
+        System.out.println(service);
+        System.out.println(service1);
+        System.out.println(service2);
 
 //    CustomerService service = new DefaultCustomerService(new CustomerRepositoryDB());
 //    List<Customer> customers = service.getAllCustomersWithStars();
