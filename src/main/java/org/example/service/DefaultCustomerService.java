@@ -20,7 +20,7 @@ public class DefaultCustomerService implements CustomerService{
 //    injecting the repository using the setter
     public DefaultCustomerService() {}
 
-    public void setCustomerRepository(CustomerRepository repository){
+    public void setRepository(CustomerRepository repository){
         this.repository = repository;
     }
 
@@ -38,7 +38,4 @@ public class DefaultCustomerService implements CustomerService{
 
     }
 
-    public void setRepository(CustomerRepository repository) {
-        this.repository = repository;
-    }
 }
