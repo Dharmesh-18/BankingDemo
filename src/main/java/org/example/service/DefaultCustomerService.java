@@ -17,11 +17,14 @@ public class DefaultCustomerService implements CustomerService{
 
     private CustomerRepository repository ;
 
-//    injecting the repository using the constructor
-    public DefaultCustomerService(CustomerRepository repository) {
-        this.repository = repository;
+//    injecting the repository using the setter
+    public DefaultCustomerService() {}
 
+    public void setCustomerRepository(CustomerRepository repository){
+        this.repository = repository;
     }
+
+
 
     public List<Customer> getAllCustomers() {
         return repository.findAll();
@@ -35,4 +38,7 @@ public class DefaultCustomerService implements CustomerService{
 
     }
 
+    public void setRepository(CustomerRepository repository) {
+        this.repository = repository;
+    }
 }
