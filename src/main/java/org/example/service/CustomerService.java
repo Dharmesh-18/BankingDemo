@@ -7,6 +7,5 @@ import java.util.List;
 public interface CustomerService {
 
     public List<Customer> getAllCustomers();
-    public List<Customer> getAllCustomersWithStars();
 
 }
