@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
+@Repository
 public class CustomerRepositoryDB implements CustomerRepository{
 
     public List<Customer> findAll(){
