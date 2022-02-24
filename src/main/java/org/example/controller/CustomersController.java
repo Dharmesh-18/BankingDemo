@@ -3,10 +3,7 @@ package org.example.controller;
 import org.example.model.Customer;
 import org.example.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +24,13 @@ public class CustomersController {
     public Customer getCustomer(@PathVariable Long id){
         return customerService.getCustomer(id);
     }
+
+
+    @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
+    public void deleteCustomer(@PathVariable Long id){
+        customerService.deleteCustomer(id);
+    }
+
+
 
 }

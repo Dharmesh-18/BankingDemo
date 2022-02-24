@@ -32,6 +32,12 @@ public class DefaultCustomerService implements CustomerService{
     public Customer getCustomer(Long id) {
         Optional <Customer> optionalCustomer = repository.findById(id);
         return optionalCustomer.get();
+    }
+
+    @Override
+    public void deleteCustomer(Long id) {
+        repository.deleteById(id);
+
 
     }
 
